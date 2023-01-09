@@ -3,7 +3,9 @@
     <img src="../assets/img/dc-logo.png" alt="DC Logo" />
     <ul>
       <li v-for:="item in menuItems">
-        {{ item.text }}
+        <a href="#">
+          {{ item.text }}
+        </a>
       </li>
     </ul>
   </div>
@@ -73,9 +75,25 @@ div.nav-wrapper {
       text-transform: uppercase;
       font-size: 0.7rem;
       font-weight: 500;
+      position: relative;
 
-      &:hover {
-        color: $accent-color;
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        top: 42px;
+        width: 50%;
+        border-bottom: 5px solid $accent-color;
       }
     }
   }
