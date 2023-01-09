@@ -1,11 +1,13 @@
 <script>
 import DcHeader from "./components/DcHeader.vue";
 import MainVue from "./components/MainVue.vue";
+import MainFooter from "./components/MainFooter.vue";
 
 export default {
   components: {
     DcHeader,
     MainVue,
+    MainFooter,
   },
 };
 </script>
@@ -18,7 +20,9 @@ export default {
   <main>
     <MainVue />
   </main>
-  <footer></footer>
+  <footer>
+    <MainFooter />
+  </footer>
 </template>
 
 <style lang="scss">
