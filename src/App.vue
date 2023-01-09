@@ -1,9 +1,11 @@
 <script>
 import DcHeader from "./components/DcHeader.vue";
+import MainVue from "./components/MainVue.vue";
 
 export default {
   components: {
     DcHeader,
+    MainVue,
   },
 };
 </script>
@@ -13,7 +15,9 @@ export default {
     <DcHeader />
   </header>
 
-  <main></main>
+  <main>
+    <MainVue />
+  </main>
   <footer></footer>
 </template>
 
