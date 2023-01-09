@@ -1,7 +1,20 @@
-<script setup></script>
+<script>
+import DcHeader from "./components/DcHeader.vue";
+
+export default {
+  components: {
+    DcHeader,
+  },
+};
+</script>
 
 <template>
-  <div></div>
+  <header>
+    <DcHeader />
+  </header>
+
+  <main></main>
+  <footer></footer>
 </template>
 
 <style lang="scss">
