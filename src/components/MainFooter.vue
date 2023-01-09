@@ -26,12 +26,22 @@
       </ul>
     </div>
 
-    <div class="big-logo">
-      <!-- <img src="../assets/img/dc-logo-bg.png" alt="DC Logo" /> -->
-    </div>
+    <div class="big-logo"></div>
   </div>
 
-  <div class="sub-footer"></div>
+  <div class="sub-footer">
+    <div class="button-div">
+      <a href="#">SIGN-UP NOW!</a>
+    </div>
+    <div class="social">
+      <p>Follow Us</p>
+      <img src="../assets/img/footer-facebook.png" alt="Facebook logo" />
+      <img src="../assets/img/footer-twitter.png" alt="Twitter logo" />
+      <img src="../assets/img/footer-youtube.png" alt="YouTube logo" />
+      <img src="../assets/img/footer-pinterest.png" alt="Pinterest logo" />
+      <img src="../assets/img/footer-periscope.png" alt="Periscope logo" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -167,7 +177,37 @@ div.footer-menu-wrapper {
 }
 
 div.sub-footer {
-  height: 10vh;
-  background-color: darkorange;
+  display: flex;
+  justify-content: space-between;
+  background-color: $sub-footer-bg;
+  padding: 1.5rem 1rem;
+
+  div.button-div a {
+    padding: 0.7rem;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid $accent-color;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    p {
+      color: $accent-color;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-right: 1rem;
+    }
+
+    img {
+      width: 8%;
+      padding: 0 0.6rem;
+    }
+  }
 }
 </style>
