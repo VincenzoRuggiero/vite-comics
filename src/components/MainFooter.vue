@@ -1,5 +1,6 @@
 <template>
   <div class="footer-menu-wrapper"></div>
+  <div class="sub-footer"></div>
 </template>
 <script>
 export default {};
@@ -11,5 +12,10 @@ export default {};
 div.footer-menu-wrapper {
   height: 50vh;
   background-color: salmon;
+}
+
+div.sub-footer {
+  height: 10vh;
+  background-color: darkorange;
 }
 </style>
