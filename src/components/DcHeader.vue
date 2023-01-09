@@ -57,7 +57,7 @@ div.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 2rem 0.4rem;
+  padding: 1rem;
 
   img {
     width: 3rem;
