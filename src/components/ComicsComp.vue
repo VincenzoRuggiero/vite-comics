@@ -36,9 +36,9 @@ div.card {
     position: absolute;
     background-color: rgb(251, 202, 6);
     color: red;
-    top: 30%;
-    right: 50%;
-    transform: translateX(50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.2rem;
     padding: 0.5rem;
   }
