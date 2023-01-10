@@ -29,7 +29,7 @@ export default {
 div.card {
   color: #fff;
   width: 196px;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
   position: relative;
 
   span {
@@ -45,7 +45,7 @@ div.card {
 
   img {
     width: 100%;
-    height: 50%;
+    height: 196px;
     object-fit: cover;
     object-position: top;
   }
