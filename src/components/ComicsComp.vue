@@ -6,22 +6,51 @@ export default {
     price: String,
     series: String,
   },
+  data() {
+    return {
+      active: false,
+    };
+  },
 };
 </script>
 
 <template>
-  <div class="card">
-    {{ imgPath }} -- {{ price }} -- {{ series }}
-    <!-- <img :src="imgPath" alt="" />
-    <p>{{}}</p>
-    <p>{{}}</p> -->
+  <div class="card" @mouseover="active = true" @mouseleave="active = false">
+    <img :src="imgPath" alt="" />
+    <span v-show="active">{{ price }}</span>
+    <p>{{ series }}</p>
   </div>
 </template>
 
 <style lang="scss">
 @use "../styles/partials/variables" as *;
+@use "../styles/general" as *;
 
 div.card {
   color: #fff;
+  width: 196px;
+  padding: 0 0.5rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    background-color: rgb(251, 202, 6);
+    color: red;
+    top: 30%;
+    right: 50%;
+    transform: translateX(50%, -50%);
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+  p {
+    text-align: left;
+  }
 }
 </style>

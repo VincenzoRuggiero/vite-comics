@@ -1,45 +1,47 @@
 <template>
-  <div class="footer-menu-wrapper">
-    <div class="footer-nav">
-      <ul>
-        <h3>DC COMICS</h3>
-        <li v-for:="items in comicsItems">
-          {{ items.text }}
-        </li>
+  <div class="container">
+    <div class="footer-menu-wrapper">
+      <div class="footer-nav">
+        <ul>
+          <h3>DC COMICS</h3>
+          <li v-for:="items in comicsItems">
+            {{ items.text }}
+          </li>
 
-        <h3>SHOP</h3>
-        <li v-for:="items in shopItems">
-          {{ items.text }}
-        </li>
-      </ul>
-      <ul>
-        <h3>DC</h3>
-        <li v-for:="items in dcItems">
-          {{ items.text }}
-        </li>
-      </ul>
-      <ul>
-        <h3>SITES</h3>
-        <li v-for:="items in sitesItems">
-          {{ items.text }}
-        </li>
-      </ul>
+          <h3>SHOP</h3>
+          <li v-for:="items in shopItems">
+            {{ items.text }}
+          </li>
+        </ul>
+        <ul>
+          <h3>DC</h3>
+          <li v-for:="items in dcItems">
+            {{ items.text }}
+          </li>
+        </ul>
+        <ul>
+          <h3>SITES</h3>
+          <li v-for:="items in sitesItems">
+            {{ items.text }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="big-logo"></div>
     </div>
 
-    <div class="big-logo"></div>
-  </div>
-
-  <div class="sub-footer">
-    <div class="button-div">
-      <a href="#">SIGN-UP NOW!</a>
-    </div>
-    <div class="social">
-      <p>Follow Us</p>
-      <img src="../assets/img/footer-facebook.png" alt="Facebook logo" />
-      <img src="../assets/img/footer-twitter.png" alt="Twitter logo" />
-      <img src="../assets/img/footer-youtube.png" alt="YouTube logo" />
-      <img src="../assets/img/footer-pinterest.png" alt="Pinterest logo" />
-      <img src="../assets/img/footer-periscope.png" alt="Periscope logo" />
+    <div class="sub-footer">
+      <div class="button-div">
+        <a href="#">SIGN-UP NOW!</a>
+      </div>
+      <div class="social">
+        <p>Follow Us</p>
+        <img src="../assets/img/footer-facebook.png" alt="Facebook logo" />
+        <img src="../assets/img/footer-twitter.png" alt="Twitter logo" />
+        <img src="../assets/img/footer-youtube.png" alt="YouTube logo" />
+        <img src="../assets/img/footer-pinterest.png" alt="Pinterest logo" />
+        <img src="../assets/img/footer-periscope.png" alt="Periscope logo" />
+      </div>
     </div>
   </div>
 </template>
@@ -136,12 +138,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
+@use "../styles/general" as *;
 
-div.footer-menu-wrapper {
+.container {
   background-image: url(../assets/img/footer-bg.jpg);
-  z-index: 1;
+}
+div.footer-menu-wrapper {
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
@@ -188,6 +192,7 @@ div.sub-footer {
     color: white;
     text-decoration: none;
     border: 2px solid $accent-color;
+    display: flex;
   }
 
   .social {

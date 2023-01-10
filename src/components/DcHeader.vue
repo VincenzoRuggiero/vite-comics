@@ -1,13 +1,15 @@
 <template>
-  <div class="nav-wrapper">
-    <img src="../assets/img/dc-logo.png" alt="DC Logo" />
-    <ul>
-      <li v-for:="item in menuItems">
-        <a href="#">
-          {{ item.text }}
-        </a>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="nav-wrapper">
+      <img src="../assets/img/dc-logo.png" alt="DC Logo" />
+      <ul>
+        <li v-for:="item in menuItems">
+          <a href="#">
+            {{ item.text }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -54,6 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
+@use "../styles/general.scss" as *;
 
 div.nav-wrapper {
   display: flex;
