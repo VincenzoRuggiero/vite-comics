@@ -1,21 +1,37 @@
 <template>
-  <div>
-    <h3>&#10511; Content goes here &#10510;</h3>
+  <div class="comicsList">
+    <ComicsComp
+      v-for="item in items"
+      :imgPath="item.thumb"
+      :price="item.price"
+      :series="item.series" />
   </div>
 </template>
+
 <script>
-export default {};
+import ComicsComp from "./ComicsComp.vue";
+import jsonData from "../assets/dc-comics.json";
+
+export default {
+  name: "MainVue",
+  components: {
+    ComicsComp,
+  },
+  data() {
+    return {
+      items: jsonData,
+    };
+  },
+  components: {
+    ComicsComp,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
-div {
+div.comicsList {
   background-color: $black-bg;
-
-  h3 {
-    color: white;
-    padding: 2rem 1rem;
-  }
 }
 </style>
