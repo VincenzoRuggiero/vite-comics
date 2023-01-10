@@ -6,24 +6,24 @@
           <ul>
             <h3>DC COMICS</h3>
             <li v-for:="items in comicsItems">
-              {{ items.text }}
+              <a href="#">{{ items.text }}</a>
             </li>
 
             <h3>SHOP</h3>
             <li v-for:="items in shopItems">
-              {{ items.text }}
+              <a href="#">{{ items.text }}</a>
             </li>
           </ul>
           <ul>
             <h3>DC</h3>
             <li v-for:="items in dcItems">
-              {{ items.text }}
+              <a href="#">{{ items.text }}</a>
             </li>
           </ul>
           <ul>
             <h3>SITES</h3>
             <li v-for:="items in sitesItems">
-              {{ items.text }}
+              <a href="#">{{ items.text }}</a>
             </li>
           </ul>
         </div>
@@ -171,9 +171,17 @@ export default {
       }
 
       li {
-        color: gray;
         line-height: 1.2rem;
         font-size: 0.8rem;
+
+        a {
+          text-decoration: none;
+          color: gray;
+
+          &:hover {
+            color: white;
+          }
+        }
       }
     }
 
