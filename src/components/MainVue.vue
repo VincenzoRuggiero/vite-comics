@@ -8,8 +8,8 @@
         :imgPath="item.thumb"
         :price="item.price"
         :series="item.series" />
-      <a href="#">Load More</a>
     </div>
+    <a href="#" class="button">Load More</a>
   </div>
 </template>
 
@@ -45,6 +45,7 @@ export default {
 
 .container {
   position: relative;
+  text-align: center;
 
   .banner {
     color: white;
@@ -54,16 +55,10 @@ export default {
     padding: 0.5rem 1.5rem;
     position: absolute;
     top: -20px;
+    left: 1.5rem;
   }
-}
 
-div.comicsList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1.5rem 0;
-
-  a {
+  .button {
     margin-bottom: 1.5rem;
     display: inline-block;
     background-color: $accent-color;
@@ -73,5 +68,12 @@ div.comicsList {
     text-transform: uppercase;
     padding: 0.8rem 2rem;
   }
+}
+
+div.comicsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem 0;
 }
 </style>
